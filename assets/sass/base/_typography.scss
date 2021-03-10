@@ -50,7 +50,7 @@ label {
 }
 
 // How typogrraphy should looks like on mobile version
-@include for-size(phone-only) {
+@include mq(sm) {
 	h1 {
 		// font-size: ;
 		// line-height: ;

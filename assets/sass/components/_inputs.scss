@@ -1,0 +1,7 @@
+input{
+	padding: 15px 20px;
+	border-radius: 8px;
+	@include placeholder{
+		color: #808284;
+	}
+}
