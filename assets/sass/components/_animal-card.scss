@@ -1,0 +1,36 @@
+.animal-card {
+	border-radius: 10px;
+	background-color: $color-white;
+	padding: 16px 20px;
+
+	&__header {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #CCD7DD;
+		display: flex;
+
+		img {
+			border: 1px solid #000000;
+			background: #c4c4c4;
+			margin-right: 16px;
+			border-radius: 100px;
+			overflow: hidden;
+			object-fit: contain;
+		}
+	}
+	&__body {
+		&__row {
+			@include flex(space-between, flex-start);
+			margin-bottom: 10px;
+			span{
+				&:first-child{
+					text-transform: uppercase;
+				}
+				&:last-child{
+					color: #000509;
+					opacity: .5;
+				}
+			}
+		}
+	}
+}
