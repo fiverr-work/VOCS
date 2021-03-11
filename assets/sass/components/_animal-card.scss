@@ -6,7 +6,7 @@
 	&__header {
 		margin-bottom: 20px;
 		padding-bottom: 20px;
-		border-bottom: 1px solid #CCD7DD;
+		border-bottom: 1px solid #ccd7dd;
 		display: flex;
 
 		img {
@@ -17,18 +17,29 @@
 			overflow: hidden;
 			object-fit: contain;
 		}
+		h3 {
+			font-size: 18px;
+			line-height: 28px;
+			margin-bottom: 0;
+		}
+		p {
+			margin-bottom: 0;
+			opacity: 0.7;
+			font-size: 14px;
+			line-height: 28px;
+		}
 	}
 	&__body {
 		&__row {
 			@include flex(space-between, flex-start);
 			margin-bottom: 10px;
-			span{
-				&:first-child{
+			span {
+				&:first-child {
 					text-transform: uppercase;
 				}
-				&:last-child{
+				&:last-child {
 					color: #000509;
-					opacity: .5;
+					opacity: 0.5;
 				}
 			}
 		}
