@@ -1,10 +1,35 @@
-.nav-tabs{
+.nav-tabs {
 	overflow: auto;
 	flex-wrap: nowrap;
-	.nav-item{
-		.nav-link{
-			&.active{
-
+	border-color: #ccd7dd;
+	margin-bottom: 30px;
+	.nav-item {
+		&:first-child {
+			.nav-link {
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+		.nav-link {
+			border: none;
+			outline: none;
+			color: #808284;
+			padding-bottom: 12px;
+			margin-right: 23px;
+			margin-left: 23px;
+			padding-left: 0;
+			padding-right: 0;
+			&.active {
+				color: $color-secondary;
+				@include pseudo(after) {
+					left: 0;
+					right: 0;
+					height: 3px;
+					background-color: $color-primary;
+					bottom: 0;
+					border-top-left-radius: 2px;
+					border-top-right-radius: 2px;
+				}
 			}
 		}
 	}

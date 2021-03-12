@@ -1,6 +1,10 @@
-input{
+.form-control{
 	padding: 15px 20px;
 	border-radius: 8px;
+	height: auto;
+    color: $color-secondary;
+    border-color: #4D5053;
+	margin-bottom: 24px;
 	@include placeholder{
 		color: #808284;
 	}
