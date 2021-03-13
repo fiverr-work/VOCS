@@ -1,13 +1,15 @@
+button,
 .btn {
 	@include ripple-effect;
 	padding: 15px 34px;
 	border-radius: 6px;
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 24px;
 	&-primary {
 		background-color: #2a9d8f;
-		color: #f7f7fc;
+		color: #f7f7fc !important;
 		border-color: #2a9d8f;
+		&:hover, &:active, &:focus {
+			background-color: $color-primary !important;
+			border-color: $color-primary !important;
+		}
 	}
 }

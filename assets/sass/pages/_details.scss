@@ -1,3 +1,30 @@
-.details-page{
-
+.details-page {
+	main {
+		.radio-buttons {
+			label:first-of-type {
+				margin-bottom: 12px;
+			}
+			.radio-btn {
+				margin-right: 51px;
+			}
+		}
+		.drag {
+			border: 1px solid #4d5053;
+			border-radius: 8px;
+			min-height: 156px;
+			outline: 1px dashed rgba(77, 80, 83, 0.5);
+			outline-offset: -15px;
+			@include flex(center, center);
+			flex-direction: column;
+			p {
+				margin-top: 5px;
+				margin-bottom: 6px;
+				color: #b3b4b5;
+				font-size: 14px;
+				line-height: 1.43;
+				max-width: 243.2px;
+				text-align: center;
+			}
+		}
+	}
 }

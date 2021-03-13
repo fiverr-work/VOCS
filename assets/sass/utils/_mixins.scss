@@ -101,3 +101,18 @@
 		pointer-events: all;
 	}
 }
+
+// hide Scrollbar
+@mixin scrollbar($type) {
+	@if $type== "hide" {
+		/* Hide scrollbar for IE, Edge and Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	} @else if $type== "show" {
+	}
+}

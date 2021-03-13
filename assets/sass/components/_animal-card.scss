@@ -2,36 +2,33 @@
 	border-radius: 10px;
 	padding: 16px 20px;
 	margin-bottom: 20px;
-	height: 82px;
+	max-height: 80px;
+	min-height: 80px;
 	overflow: hidden;
 	cursor: pointer;
-	transition: background 300ms ease;
-	background-color: none;
+	transition: background 300ms ease, max-height 300ms ease, transform 300ms ease;
+	background-color: transparent;
 	&__header {
-		margin-bottom: 20px;
-		padding-bottom: 20px;
-		border-bottom: 1px solid #ccd7dd;
+		margin-bottom: 7px;
+		padding-bottom: 12px;
+		border-bottom: 1px solid rgba(#ccd7dd, .7);
 		display: flex;
-		color: $color-white;
-
+		color: red;
 		img {
-			border: 1px solid #000000;
-			background: #c4c4c4;
+			border: 1px solid #C4C4C4;
 			margin-right: 16px;
 			border-radius: 100px;
 			overflow: hidden;
 			object-fit: contain;
+			width: 40px;
+			height: 40px;
 		}
-		h3 {
-			font-size: 18px;
-			line-height: 28px;
-			margin-bottom: 0;
+		h3{
+			color: $color-white;
 		}
 		p {
-			margin-bottom: 0;
+			color: $color-white;
 			opacity: 0.7;
-			font-size: 14px;
-			line-height: 28px;
 		}
 	}
 	&__body {
@@ -54,12 +51,27 @@
 	&.active {
 		background-color: $color-white;
 		height: auto;
+		min-height: 240px;
+		max-height: 260px;
 		* {
 			color: $color-secondary !important;
 		}
 	}
-	&:hover:not(.active) {
-		transition: background 300ms ease;
-		background: #335f79;
+	&:hover,
+	&:focus {
+		outline: none;
+		transition: background 300ms ease, max-height 300ms ease, transform 300ms ease;
+		&.active {
+			transform: scale(1.01);
+		}
+		height: auto;
+		max-height: 260px;
+		&:not(.active) {
+			background: #335f79;
+		}
+	}
+	&:active{
+		transform: scale(1.01);
+		transition: transform 300ms ease;
 	}
 }

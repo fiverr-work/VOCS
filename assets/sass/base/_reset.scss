@@ -17,9 +17,11 @@ html {
 	font-size: 100%; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 	-ms-text-size-adjust: 100%; /* 2 */
+	height: 100%;
 }
 
 body {
+	height: 100%;
 	overflow-x: hidden;
 }
 
@@ -43,9 +45,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 	display: block;
-	font-weight: 700;
+	margin-bottom: 0;
 }
 
 i {
@@ -150,6 +153,7 @@ img {
 	border: 0; /* 1 */
 	-ms-interpolation-mode: bicubic; /* 2 */
 	max-width: 100%;
+	object-fit: cover;
 }
 
 /**
@@ -193,4 +197,8 @@ input::-moz-focus-inner {
 textarea {
 	overflow: auto; /* 1 */
 	vertical-align: top; /* 2 */
+}
+
+label{
+	display: block;
 }

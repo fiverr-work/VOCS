@@ -14,21 +14,31 @@
 /*=== Typography Styling ===*/
 body {
 	color: $color-secondary;
-	// font-size: $size-small;
-	// font-family: $font-primary-regular, sans-serif;
+	font-size: $font-size-re;
+	font-family: $font-primary-regular, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: normal;
-	// line-height: 1.5;
 }
 
 h1 {
-	// @include font-source-sans($font-primary-bold, $font-size-xl, $color-primary-1, bold, line-height);
+	@include font-source-sans($font-primary-bold, $font-size-xl, $color-secondary, bold, 1);
+	letter-spacing: 1px;
 }
 h2 {
+	@include font-source-sans($font-primary-semibold, $font-size-lg, $color-secondary, 600, 1);
+	letter-spacing: 0.5px;
 }
 h3 {
+	@include font-source-sans($font-secondary-bold, $font-size-md, $color-secondary, bold, 1.56);
+	letter-spacing: 0.7px;
+	&.semibold {
+		font-family: $font-primary-semibold;
+		font-weight: 600;
+		line-height: 1.33;
+		letter-spacing: 0.5px;
+	}
 }
 h4 {
 }
@@ -37,17 +47,49 @@ h5 {
 h6 {
 }
 
-button {
+button,
+.btn {
+	@include font-source-sans($font-secondary-semibold, $font-size-sm, $color-white, 600, 1.71);
+	letter-spacing: 0.75px;
 }
 
 a {
+	@include font-source-sans($font-secondary-regular, $font-size-re, $color-secondary, normal, 2.13);
+	letter-spacing: 0.5px;
+	&.nav-link {
+		&.active {
+			font-family: $font-secondary-bold;
+			font-weight: bold;
+		}
+	}
+	&:hover{
+		color: $color-primary;
+	}
 }
 
 p {
+	@include font-source-sans($font-secondary-semibold, $font-size-re, $color-secondary, 600, 1.75);
+	letter-spacing: 0.5px;
+	&.small {
+		font-size: $font-size-sm;
+		font-family: $font-secondary-regular;
+		font-weight: normal;
+		line-height: 2;
+		&.secondary {
+			font-family: $font-primary-regular;
+			line-height: 1.71;
+		}
+	}
 }
 
 label {
+	@include font-source-sans($font-secondary-bold, $font-size-sm, #4D5053, bold, 1.43);
+	letter-spacing: 0.5px;
+}
 
+input, textarea{
+	@include font-source-sans($font-secondary-semibold, $font-size-sm, $color-secondary, 600, 1.43);
+	letter-spacing: 0.5px;
 }
 
 // How typogrraphy should looks like on mobile version

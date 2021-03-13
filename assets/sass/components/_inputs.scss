@@ -1,11 +1,44 @@
-.form-control{
+.form-control,
+input,
+textarea {
 	padding: 15px 20px;
 	border-radius: 8px;
 	height: auto;
-    color: $color-secondary;
-    border-color: #4D5053;
+	border: 1px solid #4D5053;
 	margin-bottom: 24px;
-	@include placeholder{
-		color: #808284;
+	width: 100%;
+	display: block;
+	&::placeholder{
+		color: #B3B4B5;
+	}
+}
+textarea {
+	min-height: 156px;
+	resize: none;
+}
+input[type="radio"] {
+	&:checked + .radio-btn {
+		bottom: 5px;
+		@include pseudo(before, $position: static) {
+			background-color: $color-primary;
+			content: url("../img/icons/checked.svg");
+		}
+	}
+}
+.radio-btn {
+	display: inline-flex;
+	margin: 0;
+	@include pseudo(before, $position: static) {
+		width: 20px;
+		height: 20px;
+		min-width: 20px;
+		min-height: 20px;
+		max-width: 20px;
+		max-height: 20px;
+		display: inline-block;
+		margin-right: 12px;
+		padding-left: 5px;
+		background-color: #d6d8e7;
+		border-radius: 50px;
 	}
 }

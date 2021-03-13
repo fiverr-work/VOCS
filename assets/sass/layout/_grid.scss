@@ -1,8 +1,12 @@
-body {
+.grid {
 	display: grid;
 	grid-template-columns: 321px auto;
 	grid-template-rows: 100vh;
 	grid-template-areas: "sidebar main";
+
+	@include mq(lg) {
+		display: block;
+	}
 }
 aside {
 	grid-area: "sidebar";
@@ -13,7 +17,59 @@ main {
 	grid-area: "main";
 	overflow: auto;
 	padding-top: 20px;
+	padding-left: 60px;
 	header {
+		max-width: 1460px;
+		padding-right: 60px;
 		@include flex(space-between, flex-start);
+		.title {
+			display: flex;
+			margin-top: auto;
+			#toggle-sidebar {
+				display: none;
+				&:checked ~ .toggle-menu {
+					.menu__bar {
+						&:nth-child(1) {
+							top: 10px;
+							transform: rotate(45deg);
+						}
+
+						&:nth-child(2) {
+							transform: translateX(100%) scale(0);
+						}
+
+						&:nth-child(3) {
+							top: 10px;
+							transform: rotate(-45deg);
+						}
+					}
+				}
+			}
+			label {
+				display: none;
+				margin-top: 4px;
+			}
+			p,
+			h1 {
+				display: inline-block;
+			}
+			p{
+				color: rgba(#000509, .7);
+				margin-left: 20px;
+			}
+		}
+	}
+	.tab-content {
+		max-width: 1460px;
+		padding-right: 60px;
+	}
+	@include mq(lg) {
+		header {
+			.title {
+				label {
+					display: block;
+				}
+			}
+		}
 	}
 }

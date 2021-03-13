@@ -2,19 +2,44 @@ aside#sidebar {
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
-
+	z-index: 10;
 	.logo {
 		margin-bottom: 22px;
 		display: block;
 	}
 	form {
 		margin-bottom: 20px;
-		input{
+		input {
 			margin-bottom: 0;
 		}
 	}
-	.logout{
-		display: block;
+	.divider {
 		margin-top: auto;
+		margin-bottom: 20px;
+		background-color: #576872;
+		height: 1px;
+	}
+	.logout {
+		display: block;
+		color: $color-white;
+		border-radius: 10px;
+		padding: 16px 20px;
+		transition: background 300ms ease;
+		&:hover {
+			background: #335f79;
+			transition: background 300ms ease;
+		}
+		svg {
+			margin-right: 16px;
+		}
+	}
+
+	@include mq(lg) {
+		padding: 25px 20px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: auto;
+		left: -100%;
 	}
 }
