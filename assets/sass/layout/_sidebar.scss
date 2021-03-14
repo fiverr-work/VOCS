@@ -7,6 +7,7 @@ aside#sidebar {
 	.logo {
 		margin-bottom: 22px;
 		display: block;
+		align-self: flex-start;
 	}
 	form {
 		margin-bottom: 20px;
@@ -22,7 +23,6 @@ aside#sidebar {
 		@include scrollbar(hide);
 	}
 	.divider {
-		margin-top: auto;
 		margin-bottom: 20px;
 		background-color: #576872;
 		height: 1px;
@@ -60,7 +60,7 @@ aside#sidebar {
 		overflow: auto;
 		top: 82px;
 		width: 100%;
-		.cards{
+		.cards {
 			overflow: visible;
 		}
 	}
