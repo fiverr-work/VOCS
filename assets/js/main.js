@@ -1,4 +1,12 @@
 $(() => {
-	// Enable Bootstrap tooltip
-	$('[data-toggle="tooltip"]').tooltip();
+  $("#toggle-sidebar").change(() => {
+    $("#sidebar").toggleClass("is-active");
+  });
+//   $("input[type=date]").on("input", function () {
+//     if ($(this).val().length > 0) {
+//       $(this).addClass("full");
+//     } else {
+//       $(this).removeClass("full");
+//     }
+//   });
 });

@@ -17,6 +17,7 @@
 @import "components/animal-card";
 @import "components/nav-tabs";
 @import "components/menu-icon";
+@import "components/alert";
 
 // Layout;
 @import "layout/grid";
@@ -24,6 +25,4 @@
 @import "layout/navbar";
 
 // Pages;
-@import 'pages/details';
-@import 'pages/transfer';
-@import 'pages/reaction';
+@import 'pages/home';

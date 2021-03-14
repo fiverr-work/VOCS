@@ -21,6 +21,7 @@
 @mixin ripple-effect {
 	display: inline-block;
 	overflow: hidden;
+	cursor: pointer;
 
 	@include pseudo($loc: before) {
 		background-color: $color-white;

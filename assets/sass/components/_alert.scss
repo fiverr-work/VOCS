@@ -1,0 +1,21 @@
+.alert{
+	border: none;
+	border-left: 8px solid;
+	padding: 15px 24px;
+	border-radius: 0;
+	@include flex(space-between, center);
+	&-success{
+		background-color: #E6EBEE;
+		border-color: #2A9D8F;
+		p{
+			color: #66879A;
+		}
+	}
+	button{
+		background: none;
+		padding: 0;
+		svg{
+			margin: 0;
+		}
+	}
+}

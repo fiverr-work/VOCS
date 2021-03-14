@@ -2,19 +2,22 @@
 input,
 textarea {
 	padding: 15px 20px;
-	border-radius: 8px;
+	border-radius: 4px;
 	height: auto;
-	border: 1px solid #4D5053;
+	border: 1px solid #4d5053;
 	margin-bottom: 24px;
 	width: 100%;
+	max-height: 56px;
 	display: block;
-	&::placeholder{
-		color: #B3B4B5;
+	&::placeholder {
+		color: #b3b4b5;
 	}
 }
 textarea {
 	min-height: 156px;
+	max-height: auto;
 	resize: none;
+	@extend .form-control;
 }
 input[type="radio"] {
 	&:checked + .radio-btn {
@@ -25,6 +28,15 @@ input[type="radio"] {
 		}
 	}
 }
+// input[type="date"]:before {
+// 	color: lightgray;
+// 	content: attr(placeholder);
+// }
+
+// input[type="date"].full:before {
+// 	color: black;
+// 	content: "" !important;
+// }
 .radio-btn {
 	display: inline-flex;
 	margin: 0;
@@ -40,5 +52,25 @@ input[type="radio"] {
 		padding-left: 5px;
 		background-color: #d6d8e7;
 		border-radius: 50px;
+	}
+}
+
+.radio-numbers {
+	margin-bottom: 24px;
+	@include flex(space-between, stretch);
+	label {
+		padding: 5px 11px;
+		border-radius: 4px;
+		background: #ffffff;
+		border: 1px solid #b3c3cd;
+		color: $color-primary;
+		margin-bottom: 0;
+	}
+	input[type="radio"] {
+		&:checked + label {
+			background: $color-primary;
+			color: $color-white;
+			border-color: $color-primary;
+		}
 	}
 }

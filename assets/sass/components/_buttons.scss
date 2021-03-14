@@ -3,6 +3,7 @@ button,
 	@include ripple-effect;
 	padding: 15px 34px;
 	border-radius: 6px;
+
 	&-primary {
 		background-color: #2a9d8f;
 		color: #f7f7fc !important;
@@ -11,5 +12,25 @@ button,
 			background-color: $color-primary !important;
 			border-color: $color-primary !important;
 		}
+	}
+	&-outline{
+		color: $color-secondary;
+		background: none;
+		border: 1px solid;
+		padding: 8px 20px;
+		&:hover, &:active, &:focus{
+			background-color: $color-secondary !important;
+			border-color: $color-secondary !important;
+			color: $color-white;
+			svg{
+				path{
+					stroke: $color-white;
+				}
+			}
+		}
+	}
+	svg{
+		margin-right: 10px;
+		height: 20px;
 	}
 }
