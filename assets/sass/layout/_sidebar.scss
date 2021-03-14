@@ -1,8 +1,9 @@
 aside#sidebar {
 	padding: 40px;
+	z-index: 10;
 	display: flex;
 	flex-direction: column;
-	z-index: 10;
+	background-color: $color-primary;
 	.logo {
 		margin-bottom: 22px;
 		display: block;
@@ -13,7 +14,15 @@ aside#sidebar {
 			margin-bottom: 0;
 		}
 	}
+	.cards {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		overflow-y: auto;
+		@include scrollbar(hide);
+	}
 	.divider {
+		overflow: auto;
 		margin-top: auto;
 		margin-bottom: 20px;
 		background-color: #576872;
@@ -36,13 +45,13 @@ aside#sidebar {
 
 	@include mq(lg) {
 		padding: 20px;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		bottom: 0;
 		right: auto;
 		left: -100%;
 		transition: left 400ms ease-out;
-		top: 105px;
+		top: 99px;
 		&.is-active {
 			left: 0;
 			transition: left 300ms ease;

@@ -6,14 +6,13 @@
 	min-height: 80px;
 	overflow: hidden;
 	cursor: pointer;
-	transition: background 300ms ease, max-height 300ms ease, transform 300ms ease;
+	transition: background 300ms ease, max-height 300ms ease;
 	background-color: transparent;
 	&__header {
 		margin-bottom: 7px;
 		padding-bottom: 12px;
 		border-bottom: 1px solid rgba(#ccd7dd, .7);
 		display: flex;
-		color: red;
 		img {
 			border: 1px solid #C4C4C4;
 			margin-right: 16px;
@@ -60,18 +59,11 @@
 	&:hover,
 	&:focus {
 		outline: none;
-		transition: background 300ms ease, max-height 300ms ease, transform 300ms ease;
-		&.active {
-			transform: scale(1.01);
-		}
-		height: auto;
+		transition: background 300ms ease, max-height 300ms ease;
+		height: 240px;
 		max-height: 260px;
 		&:not(.active) {
 			background: #335f79;
 		}
-	}
-	&:active{
-		transform: scale(1.01);
-		transition: transform 300ms ease;
 	}
 }

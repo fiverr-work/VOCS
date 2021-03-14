@@ -1,0 +1,68 @@
+main {
+	overflow: auto;
+	padding-left: 60px;
+	padding-bottom: 60px;
+	header {
+		max-width: 1460px;
+		padding-top: 20px;
+		padding-right: 60px;
+		padding-bottom: 24px;
+		background: $color-white;
+		z-index: 10;
+		@include flex(space-between, center);
+
+		.title {
+			display: flex;
+			#toggle-sidebar {
+				display: none;
+				&:checked ~ .toggle-menu {
+					.menu__bar {
+						&:nth-child(1) {
+							top: 10px;
+							transform: rotate(45deg);
+						}
+
+						&:nth-child(2) {
+							transform: translateX(100%) scale(0);
+						}
+
+						&:nth-child(3) {
+							top: 10px;
+							transform: rotate(-45deg);
+						}
+					}
+				}
+			}
+			label {
+				display: none;
+				margin-top: 4px;
+			}
+			p,
+			h1 {
+				display: inline-block;
+			}
+			p {
+				color: rgba(#000509, 0.7);
+				margin-left: 20px;
+			}
+		}
+	}
+	.tab-content {
+		max-width: 1460px;
+		padding-right: 60px;
+	}
+	@include mq(lg) {
+		padding-top: 100px;
+		header {
+			position: fixed;
+			top: 0;
+			left: 60px;
+			right: 0;
+			.title {
+				label {
+					display: block;
+				}
+			}
+		}
+	}
+}
