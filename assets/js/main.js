@@ -8,8 +8,9 @@ $(() => {
   });
   $(".drag").dropzone(
     {
-      url: "/file/post",
-      previewsContainer: ".preview-images"
+      url: "/",
+      previewsContainer: ".preview-images",
+      addRemoveLinks: true,
     }
     );
 });
