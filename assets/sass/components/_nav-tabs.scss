@@ -1,17 +1,11 @@
 .nav-tabs {
-	overflow-x: scroll;
-	overflow-y: hidden;
 	flex-wrap: nowrap;
 	border: none;
 	margin-bottom: 30px;
-	@include scrollbar(hide);
-	@include pseudo(after){
-		width: 100%;
-		height: 1px;
-		background: #CCD7DD;
-		bottom: 0;
-		z-index: 0;
-	}
+	max-height: 53px;
+	overflow-y: hidden;
+		border-bottom: 1px solid #ccd7dd;
+		@include scrollbar(hide);
 	.nav-item {
 		&:first-child {
 			.nav-link {
@@ -23,7 +17,8 @@
 			border: none;
 			outline: none;
 			color: #808284;
-			padding-bottom: 12px;
+			padding-bottom: 10px;
+			margin-bottom: 2px;
 			margin-right: 23px;
 			margin-left: 23px;
 			padding-left: 0;
@@ -45,5 +40,33 @@
 	}
 	&:hover {
 		@include scrollbar(show);
+	}
+	/* width */
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 6px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		border-radius: 50px;
+		background: #2a9d8f;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: $color-primary;
+	}
+	@include mq(sm) {
+		overflow: auto;
+		border-bottom: 1px solid #ccd7dd;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 }
