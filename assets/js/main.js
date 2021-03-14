@@ -6,4 +6,10 @@ $(() => {
     if ($(this).val().length > 0) $(this).addClass("empty");
     else $(this).removeClass("empty");
   });
+  $(".drag").dropzone(
+    {
+      url: "/file/post",
+      previewsContainer: ".preview-images"
+    }
+    );
 });
