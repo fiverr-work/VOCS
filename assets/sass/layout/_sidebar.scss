@@ -22,7 +22,6 @@ aside#sidebar {
 		@include scrollbar(hide);
 	}
 	.divider {
-		overflow: auto;
 		margin-top: auto;
 		margin-bottom: 20px;
 		background-color: #576872;
@@ -55,6 +54,14 @@ aside#sidebar {
 		&.is-active {
 			left: 0;
 			transition: left 300ms ease;
+		}
+	}
+	@include mq(sm) {
+		overflow: auto;
+		top: 82px;
+		width: 100%;
+		.cards{
+			overflow: visible;
 		}
 	}
 }
